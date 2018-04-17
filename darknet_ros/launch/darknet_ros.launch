@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <launch>
+  <include file="$(find usb_cam)/launch/usb_cam.launch"/>
+
   <!-- Console launch prefix -->
   <arg name="launch_prefix" default=""/>
 
@@ -10,7 +12,8 @@
 
   <!-- Load parameters -->
   <rosparam command="load" ns="darknet_ros" file="$(find darknet_ros)/config/ros.yaml"/>
-  <rosparam command="load" ns="darknet_ros" file="$(find darknet_ros)/config/yolov2-tiny.yaml"/>
+  <!-- <rosparam command="load" ns="darknet_ros" file="$(find darknet_ros)/config/yolo9000.yaml"/> -->
+  <rosparam command="load" ns="darknet_ros" file="$(find darknet_ros)/config/yolo9000.yaml"/>
 
   <!-- Start darknet and ros wrapper -->
   <node pkg="darknet_ros" type="darknet_ros" name="darknet_ros" output="screen" launch-prefix="$(arg launch_prefix)">

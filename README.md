@@ -1,3 +1,8 @@
+# Reefbot Fish Detection System
+
+YOLO 9000 was not able to run smoothly and did not produce good results, will be training fish dataset on YOLO v2 architecture from scratch. Work in progress.
+
+
 # YOLO v2 for ROS: Real-Time Object Detection for ROS
 
 ## Overview
